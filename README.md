@@ -21,6 +21,13 @@ This project is compatible with most common browser even on mobile, however midi
 
 * **Brilli Lorenzo**
 
+## Why "Spaghetti"
+
+Because yes.
+
 ## License
 
 This project is licensed under the GNU General Public License v3 - see LICENSE.txt for details.
+
+Spaghetti Tonnetz - browser tonnetz visualizator
+Copyright (C) 2020  Brilli Lorenzo
