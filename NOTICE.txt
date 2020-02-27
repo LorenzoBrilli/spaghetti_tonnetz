@@ -1,8 +1,8 @@
 p5.js is licensed under the terms of the GNU LESSER GENERAL PUBLIC LICENSE Version 2.1 (which you can read below)
+p5.sound and webmidi.js are licensed under the terms of the MIT License (which you can read below)
 p5.js source code can be found at: https://github.com/processing/p5.js
-
-p5.sound is licensed under the terms of the MIT License (which you can read below)
 p5.sound source code can be found at: https://github.com/processing/p5.js-sound
+webmidi source code can be found at: https://github.com/djipco/webmidi
 
 ----------------------------------------------------------------------------
 
