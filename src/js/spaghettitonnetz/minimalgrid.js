@@ -163,6 +163,8 @@ function MinimalGrid() {
                 this.ghostQueue.splice(i,1); //remove item from array
                 i--; //decrement i because of the removed item
                 this.redrawRequired = true;
+            } else {
+                this.ghostQueue[i][0].isGhost = true;
             }
         }
     }
