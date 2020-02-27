@@ -15,7 +15,7 @@ This project is compatible with most common browser even on mobile, however midi
 * [p5.js](https://p5js.org/) - JavaScript library for creative coding
 * [p5.sound](https://github.com/processing/p5.js-sound) - Audio addon for p5.js
 * [webmidi.js](https://github.com/djipco/webmidi) - Web MIDI API helper
-* [Montserrat Project Font](https://github.com/JulietaUla/Montserrat) - Font used id project
+* [Montserrat Project Font](https://github.com/JulietaUla/Montserrat) - Very cool font
 
 ## Authors
 
@@ -29,5 +29,5 @@ Because yes.
 
 This project is licensed under the GNU General Public License v3 - see LICENSE.txt for details.
 
-Spaghetti Tonnetz - browser tonnetz visualizator.
+Spaghetti Tonnetz - browser tonnetz visualizator.se
 Copyright (C) 2020  Brilli Lorenzo
