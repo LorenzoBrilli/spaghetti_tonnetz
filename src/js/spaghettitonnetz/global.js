@@ -10,6 +10,7 @@ var ghostQueue = [];
 var ghostTimeout = 1000;
 
 var synth;
+var midi;
 
 //conversion from keyboard to ascii to notes
 var conversionKeyboard = {

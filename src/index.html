@@ -13,6 +13,7 @@
     <script src="js/spaghettitonnetz/connection.js"></script>
     <script src="js/spaghettitonnetz/triangle.js"></script>
     <script src="js/spaghettitonnetz/minimalgrid.js"></script>
+    <script src="js/spaghettitonnetz/midi.js"></script>
     <script src="js/spaghettitonnetz/global.js"></script>
     <script src="js/spaghettitonnetz/sketch.js"></script>
     <script src="js/spaghettitonnetz/ui.js"></script>
@@ -34,8 +35,7 @@
       <div class="popupclose" onclick="closePopup('sound')" >X</div>
       <div class="popuptitle">sound</div>
       <div class="popupcontent">
-        enable sound
-        <input type="checkbox" onclick="uiSoundCheckbox()" id="soundCheckbox">
+        enable sound <input type="checkbox" onclick="uiSoundCheckbox()" id="soundCheckbox">
       </div>
     </div>
 
@@ -44,6 +44,9 @@
       <div class="popupclose" onclick="closePopup('midi')" >X</div>
       <div class="popuptitle">midi</div>
       <div class="popupcontent">
+        enable midi <input type="checkbox" onclick="uiMidiCheckbox()" id="midiCheckbox">
+        <br/>
+        select device <select name="comboMidi" id="comboMidi"></select>
       </div>
     </div>
 

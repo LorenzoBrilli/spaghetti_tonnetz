@@ -19,6 +19,9 @@ function setup() {
   //synth object
   synth = new Synth();
 
+  //midi object
+  midi = new Midi();
+
 }
 
 function draw() {
