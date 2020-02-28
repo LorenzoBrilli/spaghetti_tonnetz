@@ -61,6 +61,7 @@ function preload() {
   }
   
   function mouseWheel(event) {
+    if (disableWheel) return;
     //increment or decrement scale according to direction, limit if necessary
     if (event.delta > 0 && scl < 5){
       scl *= 1.02;
