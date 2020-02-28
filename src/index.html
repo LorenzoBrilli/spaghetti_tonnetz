@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spaghetti Tonnetz</title>
-    <style> body {padding: 0; margin: 0;} </style>
+    <link rel="stylesheet" href="style.css">
     <script src="js/p5/p5.js"></script>
     <script src="js/p5/p5.sound.js"></script>
     <script src="js/webmidi/webmidi.js"></script>
@@ -15,8 +15,14 @@
     <script src="js/spaghettitonnetz/minimalgrid.js"></script>
     <script src="js/spaghettitonnetz/global.js"></script>
     <script src="js/spaghettitonnetz/sketch.js"></script>
+    <script src="js/spaghettitonnetz/ui.js"></script>
   </head>
   <body>
-    <h1>TEST</h1>
+    <div id="topbar">
+      <ul>
+        <li class="title">Spaghetti Tonnetz</li>
+        <li class="clickable" onclick="showAbout()">about</li>
+      </ul>
+    </div>
   </body>
 </html>
