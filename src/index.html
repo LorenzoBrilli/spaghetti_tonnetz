@@ -18,12 +18,39 @@
     <script src="js/spaghettitonnetz/ui.js"></script>
   </head>
   <body>
+
     <div id="topbar">
       <ul>
         <li class="title">Spaghetti Tonnetz</li>
-        <li class="clickable" onclick="showAbout()">about</li>
+        <li class="clickable" onclick="showPopup('about')">about</li>
+        <li class="clickable" onclick="showPopup('midi')">midi</li>
+        <li class="clickable" onclick="showPopup('sound')">sound</li>
       </ul>
-      
     </div>
+    
+    <div style="display:none" id="graybackgrounddiv"></div>
+
+    <div style="display:none" class="popupdiv" id="about">
+      <div class="popupclose" onclick="closePopup('about')" >X</div>
+      <div class="popuptitle">about</div>
+      <div class="popupcontent">
+      </div>
+    </div>
+    
+    <div style="display:none" class="popupdiv" id="sound">
+      <div class="popupclose" onclick="closePopup('sound')" >X</div>
+      <div class="popuptitle">sound</div>
+      <div class="popupcontent">
+      </div>
+    </div>
+
+    
+    <div style="display:none" class="popupdiv" id="midi">
+      <div class="popupclose" onclick="closePopup('midi')" >X</div>
+      <div class="popuptitle">midi</div>
+      <div class="popupcontent">
+      </div>
+    </div>
+
   </body>
 </html>
