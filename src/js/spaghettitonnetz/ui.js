@@ -9,3 +9,9 @@ function closePopup(name) {
     document.getElementById(name).style.display = "none";
     disableWheel = false;
 }
+
+function uiSoundCheckbox() {
+    let checked = document.getElementById("soundCheckbox").checked;
+    if (checked) synth.enable();
+    else synth.disable();
+}

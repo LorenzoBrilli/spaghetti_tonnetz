@@ -16,6 +16,9 @@ function setup() {
   //create minimal grid object
   minimalGrid = new MinimalGrid();
 
+  //synth object
+  synth = new Synth();
+
 }
 
 function draw() {
@@ -77,13 +80,13 @@ function mouseWheel(event) {
 //handle key pressed and released
 function keyPressed() {
   if (conversionOctKeyboard[keyCode] !== undefined){
-    //playNote(conversionOctKeyboard[keyCode]);
+    synth.playNote(conversionOctKeyboard[keyCode]);
     minimalGrid.updateNote(conversionKeyboard[keyCode],true);
   }
 }
 function keyReleased() {
   if (conversionOctKeyboard[keyCode] !== undefined){
-    //releaseNote(conversionOctKeyboard[keyCode]);
+    synth.releaseNote(conversionOctKeyboard[keyCode]);
     minimalGrid.updateNote(conversionKeyboard[keyCode],false);
   }
 }

@@ -9,6 +9,8 @@ var minimalGrid; //minimal grid
 var ghostQueue = [];
 var ghostTimeout = 1000;
 
+var synth;
+
 //conversion from keyboard to ascii to notes
 var conversionKeyboard = {
     "65" : "C",
