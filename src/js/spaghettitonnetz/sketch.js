@@ -87,3 +87,5 @@ function preload() {
       minimalGrid.updateNote(conversionKeyboard[keyCode],false);
     }
   }
+
+  //test NOT
