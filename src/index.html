@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spaghetti Tonnetz</title>
-    <style> body {padding: 0; margin: 0;} </style>
+    <link rel="stylesheet" href="style.css">
     <script src="js/p5/p5.js"></script>
     <script src="js/p5/p5.sound.js"></script>
     <script src="js/webmidi/webmidi.js"></script>
@@ -15,7 +15,57 @@
     <script src="js/spaghettitonnetz/minimalgrid.js"></script>
     <script src="js/spaghettitonnetz/global.js"></script>
     <script src="js/spaghettitonnetz/sketch.js"></script>
+    <script src="js/spaghettitonnetz/ui.js"></script>
   </head>
   <body>
+
+    <div id="topbar">
+      <ul>
+        <li class="title">Spaghetti Tonnetz</li>
+        <li class="clickable" onclick="showPopup('about')">about</li>
+        <li class="clickable" onclick="showPopup('midi')">midi</li>
+        <li class="clickable" onclick="showPopup('sound')">sound</li>
+      </ul>
+    </div>
+
+    <div style="display:none" id="graybackgrounddiv"></div>
+    
+    <div style="display:none" class="popupdiv" id="sound">
+      <div class="popupclose" onclick="closePopup('sound')" >X</div>
+      <div class="popuptitle">sound</div>
+      <div class="popupcontent">
+      </div>
+    </div>
+
+    
+    <div style="display:none" class="popupdiv" id="midi">
+      <div class="popupclose" onclick="closePopup('midi')" >X</div>
+      <div class="popuptitle">midi</div>
+      <div class="popupcontent">
+      </div>
+    </div>
+
+    <div style="display:none" class="popupdiv" id="about">
+      <div class="popupclose" onclick="closePopup('about')" >X</div>
+      <div class="popuptitle">about</div>
+      <div class="popupcontent">
+        Spaghetti Tonnetz is an open source tonnetz diagram viewer built for browser in javascript using p5.js and p5.sound libraries. <br/><br/>
+
+        This project is licensed under the GNU General Public License v3, the source code can be found <a href="https://github.com/LorenzoBrilli/spaghetti_tonnetz">here</a>. <br/><br/>
+
+        The software is built using: <br/>
+        <ul>
+          <li><a href="https://p5js.org/" rel="nofollow">p5.js</a> - JavaScript library for creative coding [LGPL v2.1]</li>
+          <li><a href="https://github.com/processing/p5.js-sound">p5.sound</a> - Audio addon for p5.js [MIT License]</li>
+          <li><a href="https://github.com/djipco/webmidi">webmidi.js</a> - Web MIDI API helper [MIT License]</li>
+          <li><a href="https://github.com/JulietaUla/Montserrat">Montserrat Project Font</a> - Very cool font [SIL OFL v1.1]</li>
+          </ul>
+
+          <br/> <br/>
+
+        Spaghetti Tonnetz - browser tonnetz visualizator. Copyright (C) 2020 Brilli Lorenzo
+      </div>
+    </div>
+
   </body>
 </html>

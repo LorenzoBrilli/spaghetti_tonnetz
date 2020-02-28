@@ -55,3 +55,5 @@ var colorActiveConn = "#d35400";
 var colorGhostConn = "#95a5a6";
 var colorActiveTri = "#f39c12";
 var colorGhostTri = "#bdc3c7";
+
+var disableWheel = false;
