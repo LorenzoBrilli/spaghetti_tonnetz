@@ -87,5 +87,3 @@ function keyReleased() {
     minimalGrid.updateNote(conversionKeyboard[keyCode],false);
   }
 }
-
-//test
