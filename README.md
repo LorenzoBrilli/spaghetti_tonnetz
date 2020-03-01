@@ -1,6 +1,6 @@
 # Spaghetti Tonnetz
 
-Spaghetti Tonnetz is a tonnetz diagram viewer built for browser in javascript using p5.js and p5.sound libraries.
+Spaghetti Tonnetz is a tonnetz diagram viewer built for browser in javascript using p5.js librarie and the Web Audio API.
 
 ## Getting Started
 
@@ -13,7 +13,6 @@ This project is compatible with most common browser even on mobile, however midi
 ## Built With
 
 * [p5.js](https://p5js.org/) - JavaScript library for creative coding
-* [p5.sound](https://github.com/processing/p5.js-sound) - Audio addon for p5.js
 * [webmidi.js](https://github.com/djipco/webmidi) - Web MIDI API helper
 * [Montserrat Project Font](https://github.com/JulietaUla/Montserrat) - Very cool font
 
