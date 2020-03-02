@@ -51,3 +51,43 @@ function comboMidiGet() {
     let combo = document.getElementById("comboMidi");
     return combo.options[combo.selectedIndex].value;
 }
+
+function comboSelectChange(value) {
+    synth.setWave(value);
+}
+
+function sliderFrequencyChange(value) {
+    synth.setFilterFrequency(value);
+    document.getElementById("filterFreqDiv").innerHTML=value;
+}
+function sliderQChange(value) {
+    synth.setFilterQ(value);
+    document.getElementById("filterQDiv").innerHTML=value;
+}
+function sliderFilterGainChange(value) {
+    synth.setFilterGain(value);
+    document.getElementById("filterGainDiv").innerHTML=value;
+}
+function comboFilterChange(value){
+    synth.setFilterType(value);
+}
+function sliderADSRAttack(value){
+    synth.setAdsr(value,undefined,undefined,undefined);
+    document.getElementById("adsrAttackDiv").innerHTML=value;
+}
+function sliderADSRDecay(value){
+    synth.setAdsr(undefined,value,undefined,undefined);
+    document.getElementById("adsrDecayDiv").innerHTML=value;
+}
+function sliderADSRSustain(value){
+    synth.setAdsr(undefined,undefined,value,undefined);
+    document.getElementById("adsrSustainDiv").innerHTML=value;
+}
+function sliderADSRRelease(value){
+    synth.setAdsr(undefined,undefined,undefined,value);
+    document.getElementById("adsrReleaseDiv").innerHTML=value;
+}
+function sliderVolumeChange(value){
+    synth.setVolume(value);
+    document.getElementById("volumeRangeDiv").innerHTML=value;
+}

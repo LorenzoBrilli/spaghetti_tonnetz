@@ -34,7 +34,39 @@
       <div class="popupclose" onclick="closePopup('sound')" >X</div>
       <div class="popuptitle">sound</div>
       <div class="popupcontent">
-        enable sound <input type="checkbox" onclick="uiSoundCheckbox()" id="soundCheckbox">
+        enable sound <input type="checkbox" onclick="uiSoundCheckbox()" id="soundCheckbox"> <br/><br/><br/>
+        volume <input oninput="sliderVolumeChange(this.value/100.0)" type="range" min="1" max="100" value="30" id="volumeRange">
+        <span id="volumeRangeDiv">0.3</span><br/><br/><br/>
+        wave <select onchange="comboSelectChange(this.value)" name="waveCombo" id="waveCombo">
+          <option value="sine">sine</option>
+          <option value="square">square</option>
+          <option value="sawtooth">sawtooth</option>
+          <option value="triangle">triangle</option>
+        </select> <br/><br/><br/>
+        filter type <select onchange="comboFilterChange(this.value)" name="filterCombo" id="filterCombo">
+          <option value="lowpass">lowpass</option>
+          <option value="highpass">highpass</option>
+          <option value="bandpass">bandpass</option>
+          <option value="lowshelf">lowshelf</option>
+          <option value="highshelf ">highshelf</option>
+          <option value="peaking">peaking</option>
+          <option value="notch">notch</option>
+          <option value="allpass">allpass</option>
+        </select> <br/><br/>
+        filter frequency <input oninput="sliderFrequencyChange(this.value)" type="range" min="1" max="10000" value="8000" id="filterFreqRange">
+        <span id="filterFreqDiv">8000</span>Hz<br/><br/>
+        filter Q <input oninput="sliderQChange(this.value/100.0)" type="range" min="1" max="500" value="100" id="filterQRange">
+        <span id="filterQDiv">1</span><br/><br/>
+        filter gain <input oninput="sliderFilterGainChange(this.value/100.0)" type="range" min="1" max="200" value="100" id="filterGainRange">
+        <span id="filterGainDiv">1</span><br/><br/><br/>
+        adsr attack <input oninput="sliderADSRAttack(this.value)" type="range" min="1" max="1000" value="50" id="adsrAttack">
+        <span id="adsrAttackDiv">50</span>ms<br/><br/>
+        adsr decay <input oninput="sliderADSRDecay(this.value)" type="range" min="1" max="1000" value="20" id="adsrDecay">
+        <span id="adsrDecayDiv">20</span>ms<br/><br/>
+        adsr sustain <input oninput="sliderADSRSustain(this.value/100.0)" type="range" min="0" max="100" value="75" id="adsrSustain">
+        <span id="adsrSustainDiv">0.75</span><br/><br/>
+        adsr release <input oninput="sliderADSRRelease(this.value)" type="range" min="1" max="5000" value="100" id="adsrRelease">
+        <span id="adsrReleaseDiv">100</span>ms<br/><br/>
       </div>
     </div>
 
