@@ -76,10 +76,12 @@ body {
     width: 15px;
     line-height: 50px;
     padding: 0px 20px;
+    user-select: none;
 }
 
 #zoomButtons ul li.clickable:hover {
     background-color: #95a5a6;
+    user-select: none;
 }
 
 
