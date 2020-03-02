@@ -13,18 +13,19 @@ function Midi() {
             let input = WebMidi.getInputByName(comboMidiGet());
             input.addListener('noteon', "all",
                 function (e) {
-                    let oct = e.note.octave;
-                    if (e.note.name == "A" || e.note.name == "A#" || e.note.name == "B") oct++;
-                    synth.playNote(""+ e.note.name + oct);
+                    synth.playMidiNote(e.note.number);
                     minimalGrid.updateNote(e.note.name,true);
                 }
             );
             input.addListener('noteoff', "all",
                 function (e) {
-                    let oct = e.note.octave;
-                    if (e.note.name == "A" || e.note.name == "A#" || e.note.name == "B") oct++;
-                    synth.releaseNote(""+ e.note.name + oct);
+                    synth.releaseMidiNote(e.note.number);
                     minimalGrid.updateNote(e.note.name,false);
+                }
+            );
+            input.addListener('pitchbend', "all",
+                function (e) {
+                    synth.setPitchBend(e.value);
                 }
             );
         });
