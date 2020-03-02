@@ -1,6 +1,17 @@
 // ---------------------------- MAIN SKETCH ----------------------
 
+function preload() {
+  try{
+    let fl = document.fonts.check('1em customFont');
+    if (fl) setup();
+    else setTimeout(preload,10);
+  } catch (ex) {
+    setTimeout(setup,300); //hopefully wait for font loading
+  }
+}
+
 function setup() {
+
 
   // get canvas 
   cnv = document.getElementById("myCanvas");
@@ -117,4 +128,4 @@ function millis() {
   return myMillis;
 }
 
-setup();
+preload();
