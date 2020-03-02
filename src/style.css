@@ -56,6 +56,33 @@ body {
     background-color: #95a5a6;
 }
 
+#zoomButtons ul {
+    position: fixed;
+    bottom:20px;
+    right: 20px;
+    width: auto;
+    list-style-type: none;
+    margin: 0; padding: 0;
+    overflow: hidden;
+    color: white;
+    background-color: #bdc3c7;
+    cursor: default;
+    user-select: none;
+}
+
+#zoomButtons ul li {
+    font-size: 25px;
+    height: 50px;
+    width: 15px;
+    line-height: 50px;
+    padding: 0px 20px;
+}
+
+#zoomButtons ul li.clickable:hover {
+    background-color: #95a5a6;
+}
+
+
 #graybackgrounddiv {
     position:fixed;
     width: 100%;

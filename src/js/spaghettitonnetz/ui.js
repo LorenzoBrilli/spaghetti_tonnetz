@@ -91,3 +91,6 @@ function sliderVolumeChange(value){
     synth.setVolume(value);
     document.getElementById("volumeRangeDiv").innerHTML=value;
 }
+function zoomUi(value) {
+    zoomGrid(value);
+}

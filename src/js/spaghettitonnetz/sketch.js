@@ -68,16 +68,20 @@ function windowResized() {
 
 function mouseWheel(event) {
   if (disableWheel) return;
+  zoomGrid(event.delta);
+  return false; //returning false block page scrolling
+}
+
+function zoomGrid(value) {
   //increment or decrement scale according to direction, limit if necessary
-  if (event.delta > 0 && scl < 5){
+  if (value > 0 && scl < 5){
     scl *= 1.02;
     minimalGrid.redrawRequired = true;
   }
-  else if (event.delta < 0 && scl > 0.1){
+  else if (value < 0 && scl > 0.1){
     scl *= 0.98;
     minimalGrid.redrawRequired = true;
   }
-  return false; //returning false block page scrolling
 }
 
 //handle key pressed and released
