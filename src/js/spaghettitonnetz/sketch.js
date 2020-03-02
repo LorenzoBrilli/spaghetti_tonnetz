@@ -1,10 +1,5 @@
 // ---------------------------- MAIN SKETCH ----------------------
 
-function preload() {
-    //load font
-    fontRegular = loadFont('assets/Montserrat-Regular.ttf');
-}
-
 function setup() {
 
   // get canvas 

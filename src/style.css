@@ -1,8 +1,3 @@
-@font-face {
-    font-family: customFont;
-    src: url(assets/Montserrat-Regular.ttf);
-}
-
 #myCanvas {
     position: fixed;
     margin: 0; padding: 0;

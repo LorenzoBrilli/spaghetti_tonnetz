@@ -18,7 +18,7 @@ This project is compatible with most common browser even on mobile, however midi
 * HTML5 Canvas - Render the graphics
 * Web Audio API - Handle Audio generation with a simple Polyphonic Synthesizer
 * [webmidi.js](https://github.com/djipco/webmidi) - Web MIDI API helper
-* [Montserrat Project Font](https://github.com/JulietaUla/Montserrat) - Very cool font
+* [Montserrat Project Font](https://github.com/JulietaUla/Montserrat) - Very cool font (base64 encoded)
 
 ## Authors
 
