@@ -15,7 +15,7 @@ var midi;
 //canvas and context
 var cnv; var ctx;
 var offCnv; var offCtx;
-
+var timer = null; //handle requestAnimation
 var myMillis = 0;
 
 //conversion from keyboard to ascii to notes

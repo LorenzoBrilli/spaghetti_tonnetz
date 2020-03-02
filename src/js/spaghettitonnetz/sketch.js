@@ -39,8 +39,9 @@ function draw() {
   //if draw needed draw all
   if (minimalGrid.redrawRequired) drawAll();
 
-  myMillis += 25; //update millis by frameTime
-  setTimeout(draw,25); //50fps->1000ms/50=25ms
+  myMillis += 16; //update millis by frameTime
+  cancelAnimationFrame(timer);
+  timer = requestAnimationFrame(draw);
 }
 
 //draw a grid of minimal grid using the graphics buffer
