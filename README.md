@@ -6,7 +6,7 @@ The project was initially based on the [p5.js](https://p5js.org/) and [p5.sound]
 
 ## Getting Started
 
-You just need to server the src folder through a web server, then navigate to the index.html file to run the software. Midi functinoality needs to be on localhost or https server.
+You just need to serve the src folder through a web server, then navigate to the index.html file to run the software. Midi functionality on Chrome needs the page to be on localhost or https server.
 
 ## Browser Compatibility
 
