@@ -22,13 +22,17 @@ function Tri(note1, note2, note3) {
     //draws the note to custom graphics buffer when called
     this.draw = function (gb) {
         if (this.isActive){
-            gb.noStroke();
-            gb.fill(colorActiveTri);
-            gb.triangle(note1.x*scl,note1.y*scl,note2.x*scl,note2.y*scl,note3.x*scl,note3.y*scl);
+            gb.fillStyle=colorActiveTri;
         } else if (this.isGhost) {
-            gb.noStroke();
-            gb.fill(colorGhostTri);
-            gb.triangle(note1.x*scl,note1.y*scl,note2.x*scl,note2.y*scl,note3.x*scl,note3.y*scl);
+            gb.fillStyle=colorGhostTri;
+        }
+        if(this.isActive || this.isGhost){
+            gb.beginPath();
+            gb.moveTo(note1.x*scl,note1.y*scl);
+            gb.lineTo(note2.x*scl,note2.y*scl);
+            gb.lineTo(note3.x*scl,note3.y*scl);
+            gb.lineTo(note1.x*scl,note1.y*scl);
+            gb.fill();
         }
     };
 

@@ -21,12 +21,15 @@ function Connection(note1, note2) {
     //draws the note to custom graphics buffer when called
     this.draw = function (gb) {
         if (this.isActive)
-            gb.stroke(colorActiveConn);
+            gb.strokeStyle=colorActiveConn;
         else if (this.isGhost)
-            gb.stroke(colorGhostConn);
+            gb.strokeStyle=colorGhostConn;
         else 
-            gb.stroke(colorConn);
-        gb.line(note1.x*scl,note1.y*scl,note2.x*scl,note2.y*scl);
+            gb.strokeStyle=colorConn;
+        gb.beginPath();
+        gb.moveTo(note1.x*scl,note1.y*scl);
+        gb.lineTo(note2.x*scl,note2.y*scl);
+        gb.stroke();
     };
 
 }

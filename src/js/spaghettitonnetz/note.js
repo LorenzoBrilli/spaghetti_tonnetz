@@ -1,16 +1,18 @@
 //Note class: it needs tha value of the note and the position
-function Note(value, x, y) {
+class Note {
 
-    this.value = value;
-    this.x = x;
-    this.y = y;
-
-    //tells if the note is active or ghost
-    this.isActive = false;
-    this.isGhost = false;
+    constructor(value, x, y) {
+        this.value = value;
+        this.x = x;
+        this.y = y;
+    
+        //tells if the note is active or ghost
+        this.isActive = false;
+        this.isGhost = false;
+    }
 
     //update note state and eventually set ghost
-    this.update = function (isActive) {
+    update(isActive) {
         if (this.isActive && !isActive){
             minimalGrid.ghostQueue.push([this,millis()]);
             this.isGhost = true;
@@ -19,30 +21,34 @@ function Note(value, x, y) {
     }
 
     //draws the note to custom graphics buffer when called
-    this.draw = function (gb) {
-        gb.stroke(colorConn);
+    draw(gb) {
         if (this.isActive){
-            gb.fill(colorActiveNote);
+            gb.fillStyle = colorActiveNote;
         }
         else if (this.isGhost) {
-            gb.fill(colorGhostNote);
+            gb.fillStyle = colorGhostNote;
         }
         else{
-            gb.fill(colorNote);
+            gb.fillStyle = colorNote;
         }
-        gb.circle(x*scl,y*scl,scl*100);       
+        gb.strokeStyle = colorConn;
+        gb.beginPath();
+        gb.arc(this.x*scl,this.y*scl,scl*50,0,Math.PI*2,false);
+        gb.fill();
+        gb.stroke();       
         if (this.isActive){
-            gb.fill(colorActiveText);
+            gb.fillStyle = colorActiveText;
         }
         else if (this.isGhost) {
-            gb.fill(colorGhostText);
+            gb.fillStyle = colorGhostText;
         }
         else{
-            gb.fill(colorText);
+            gb.fillStyle = colorText;
         }
-        gb.noStroke();
-        gb.textSize(scl*42);
-        gb.text(value, x*scl-scl*1, scl*y-scl*7);
+        gb.font = ''+scl*42+'px customFont';
+        gb.textAlign = 'center';
+        gb.textBaseline = 'middle';
+        gb.fillText(this.value, this.x*scl, scl*this.y);
     };
 
 }

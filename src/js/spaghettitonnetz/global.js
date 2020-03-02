@@ -12,6 +12,12 @@ var ghostTimeout = 1000;
 var synth;
 var midi;
 
+//canvas and context
+var cnv; var ctx;
+var offCnv; var offCtx;
+
+var myMillis = 0;
+
 //conversion from keyboard to ascii to notes
 var conversionKeyboard = {
     "65" : "C",
@@ -29,20 +35,20 @@ var conversionKeyboard = {
     "75" : "C"
 };
 //conversion from keyboard to ascii to  notes with octave
-var conversionOctKeyboard = {
-    "65" : "C4",
-    "87" : "C#4",
-    "83" : "D4",
-    "69" : "D#4",
-    "68" : "E4",
-    "70" : "F4",
-    "84" : "F#4",
-    "71" : "G4",
-    "89" : "G#4",
-    "72" : "A5",
-    "85" : "A#5",
-    "74" : "B5",
-    "75" : "C5"
+var conversionKeyMidi = {
+    "65" : 60,
+    "87" : 61,
+    "83" : 62,
+    "69" : 63,
+    "68" : 64,
+    "70" : 65,
+    "84" : 66,
+    "71" : 67,
+    "89" : 68,
+    "72" : 69,
+    "85" : 70,
+    "74" : 71,
+    "75" : 72
 };
 
 //colors
