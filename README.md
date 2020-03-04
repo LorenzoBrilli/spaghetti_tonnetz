@@ -22,7 +22,7 @@ This project is compatible with most common browser even on mobile, however midi
 
 ## Authors
 
-* **Brilli Lorenzo**
+* **Brilli Lorenzo** - [LorenzoBrilli](https://github.com/LorenzoBrilli)
 
 ## Why "Spaghetti"
 
