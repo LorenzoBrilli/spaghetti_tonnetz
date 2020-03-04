@@ -6,7 +6,7 @@ The project was initially based on the [p5.js](https://p5js.org/) and [p5.sound]
 
 ## Getting Started
 
-You just need to serve the src folder through a web server, then navigate to the index.html file to run the software. Midi functionality on Chrome needs the page to be on localhost or https server.
+You just need to serve the src folder through a web server, then navigate to the index.html file to run the software. Midi functionality on Chrome needs the page to be on localhost or https server. If you want you can build a single html file using the provided pure python3 script inside the build directory wich simply replace all external css and js with internal css and js.
 
 ## Browser Compatibility
 
