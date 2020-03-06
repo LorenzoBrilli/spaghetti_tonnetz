@@ -15,6 +15,7 @@ var midi;
 //canvas and context
 var cnv; var ctx;
 var offCnv; var offCtx;
+var dpr = 1; //device pixel ratio
 var timer = null; //handle requestAnimation
 
 //conversion from keyboard to ascii to notes

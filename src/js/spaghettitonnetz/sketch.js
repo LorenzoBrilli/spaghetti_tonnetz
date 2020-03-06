@@ -13,11 +13,13 @@ function preload() {
 function setup() {
 
 
+  dpr = window.devicePixelRatio || 1;
+
   // get canvas 
   cnv = document.getElementById("myCanvas");
   ctx = cnv.getContext("2d");
-  ctx.canvas.width = window.innerWidth;
-  ctx.canvas.height = window.innerHeight;
+  ctx.canvas.width = window.innerWidth*dpr;
+  ctx.canvas.height = window.innerHeight*dpr;
   window.addEventListener("resize", windowResized);
   cnv.addEventListener("wheel", mouseWheel);
   window.addEventListener("keydown",keyPressed);
@@ -114,9 +116,11 @@ function drawAll(){
 
 //window resized p5 event calls this funciton automatically
 function windowResized() {
+
+  dpr = window.devicePixelRatio || 1;
   //resize canvas on window resize
-  ctx.canvas.width = window.innerWidth;
-  ctx.canvas.height = window.innerHeight;
+  ctx.canvas.width = window.innerWidth*dpr;
+  ctx.canvas.height = window.innerHeight*dpr;
   minimalGrid.redrawRequired = true;
 }
 
