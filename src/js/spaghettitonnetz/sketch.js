@@ -50,9 +50,37 @@ function draw() {
   //if draw needed draw all
   if (minimalGrid.redrawRequired) drawAll();
 
-  myMillis += 16; //update millis by frameTime
   cancelAnimationFrame(timer);
   timer = requestAnimationFrame(draw);
+}
+
+//draw a grid of minimal grid using the graphics buffer
+function drawAllOLD(){
+  //render minimal grid to custom graphics buffer
+  minimalGrid.drawBuffer();
+  //set backgound
+  ctx.fillStyle = colorBG;
+  ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+  //translate to middle of screen
+  ctx.save();
+  ctx.translate(ctx.canvas.width/2-50*scl,ctx.canvas.height/2-50*scl);
+  let offx, offy;
+  for (let y = -30; y < 30; y++){
+    for (let x = -30; x < 30; x++){
+      //calcluate offset from center
+      offx = y*300*scl+x*1000*scl;
+      offy = y*519*scl+x*346*scl;
+      //only if visible
+      if (offx > 0- ctx.canvas.width/2 - 1300*scl && offy > 0 - ctx.canvas.height/2 - 650*scl && offx < ctx.canvas.width/2 + 100*scl && offy < ctx.canvas.height/2 + 100*scl){
+        ctx.save(); //save state
+        ctx.translate(offx,offy);
+        //draw the minimal grid
+        ctx.drawImage(minimalGrid.gb.canvas,0,0);
+        ctx.restore(); //restore state
+      }
+    }
+  }
+  ctx.restore();
 }
 
 //draw a grid of minimal grid using the graphics buffer
@@ -125,7 +153,7 @@ function keyReleased(event) {
 }
 
 function millis() {
-  return myMillis;
+  return Date.now();
 }
 
 preload();
