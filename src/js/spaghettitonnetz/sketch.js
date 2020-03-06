@@ -12,7 +12,6 @@ function preload() {
 
 function setup() {
 
-
   dpr = window.devicePixelRatio || 1;
 
   // get canvas 
@@ -126,18 +125,19 @@ function windowResized() {
 
 function mouseWheel(event) {
   if (disableWheel) return;
-  zoomGrid(event.deltaY);
+  if (event.deltaY>0) zoomGrid(1.05);
+  else zoomGrid(0.95);
   return false; //returning false block page scrolling
 }
 
 function zoomGrid(value) {
   //increment or decrement scale according to direction, limit if necessary
-  if (value > 0 && scl < 5){
-    scl *= 1.02;
+  if (value > 1 && scl < 5){
+    scl *= value;
     minimalGrid.redrawRequired = true;
   }
-  else if (value < 0 && scl > 0.1){
-    scl *= 0.98;
+  else if (value < 1 && scl > 0.1){
+    scl *=value;
     minimalGrid.redrawRequired = true;
   }
 }
